@@ -41,6 +41,10 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->bind('path.public', function () {
+    return base_path() . '/../public_html';
+});
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
